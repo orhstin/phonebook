@@ -1,5 +1,4 @@
 import React from 'react'
-import Phone from '@/components/Phone'
 import ContactForm from '@/components/ContactForm'
 
 const NewContact = () => {

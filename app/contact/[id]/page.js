@@ -27,6 +27,7 @@ const ContactByID = ({params}) => {
     const handleDelete = () => {
         deleteContact(params)
     }
+    
     useEffect(() => {
         const getContact = async() => {
             const contactByID = await getContactByID(id)
@@ -44,7 +45,7 @@ const ContactByID = ({params}) => {
                     <Link href="/" class="px-4 py-2 bg-blue-500 text-white rounded">Cancel</Link>
                     <button form="contact-form" type="submit" class="px-4 py-2 bg-blue-500 text-white rounded">Done</button>
                 </div>
-                <form className="space-y-6 mt-2" 
+                <form id="contact-form" className="space-y-6 mt-2" 
                 action={updateContact}>
                     <div>
                         <input type='text' name='id' hidden value={id} />
